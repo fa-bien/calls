@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Roller Derby Random Call Generator</title>
+    <link rel="stylesheet" href="calls.css" />
+  </head>
+  
+  <body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+         preserveAspectRatio="xMidYMid meet"
+         viewBox="0 0 320 240"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         >
+
+      <defs>
+        <!-- auto-update button -->
+        <g id="updateButton">
+          <text id="autoUpdateText" x="35" y="9"
+                font-size="6" font-family="Arial, sans-serif"
+                text-anchor="middle"
+                fill="grey" >
+            Auto update is off
+          </text>
+          <text id="autoUpdateExtra" x="35" y="17"
+                font-size="6" font-family="Arial, sans-serif"
+                text-anchor="middle"
+                fill="grey" >
+            click here to toggle
+          </text>
+          <text id="delayText" x="35" y="25"
+                font-size="6" font-family="Arial, sans-serif"
+                text-anchor="middle"
+                fill="grey" >
+            7" between updates
+          </text>
+          <rect id="updateButtonRect" class="buttonShape"
+                x="0" y="0" width="70" height="31" rx="8" ry="8" />
+        </g>
+        <!-- "+" button -->
+        <g id="plusButton">
+          <path class="buttonContent" d="M 0,-5 L 0,5 M -5,0 L 5,0" />
+          <circle id="plusButtonCircle" class="buttonShape" cx="0" cy="0" r="7" />
+        </g>
+        <!-- "-" button -->
+        <g id="minusButton">
+          <path class="buttonContent" d="M -5,0 L 5,0" />
+          <circle id="minusButtonCircle" class="buttonShape" cx="0" cy="0" r="7" />
+        </g>
+        
+        <!-- back button -->
+        <g id="backButton">
+          <text id="backText" x="30" y="17"
+                font-size="8" font-family="Arial, sans-serif"
+                text-anchor="middle"
+                fill="grey" >
+            Previous call
+          </text>
+          <rect id="backButtonRect" class="buttonShape"
+                x="0" y="0" width="60" height="31" rx="8" ry="8" />
+        </g>
+        <!-- forward button -->
+        <g id="forwardButton">
+          <text id="forwardText" x="30" y="17"
+                font-size="8" font-family="Arial, sans-serif"
+                text-anchor="middle"
+                fill="grey" >
+            Next call
+          </text>
+          <rect id="forwardButtonRect" class="buttonShape"
+                x="0" y="0" width="60" height="31" rx="8" ry="8" />
+        </g>
+      </defs>
+      
+      <!-- <rect id="frame" x="0" y="0" width="320" height="240" -->
+      <!--       fill="none" stroke="black" stroke-width=".1" /> -->
+      
+      <rect id="jersey" x="40" y="25" width="240" height="100" rx="50" ry="50"
+            fill="blue" stroke="none" />
+
+      <text id="number" x="160" y="75" font-size="60"
+            dominant-baseline="central" text-anchor="middle"
+            fill="white">
+        WWW0
+      </text>
+
+      <text id="call" x="160" y="170" font-size="28" font-family="Arial, sans-serif"
+            dominant-baseline="central" text-anchor="middle">
+        Blocking with the head
+      </text>
+
+      <use xlink:href="#updateButton" id="theUpdateButton" x="128" y="209" />
+      <use xlink:href="#plusButton" id="delayPlusButton" x="208" y="217" />
+      <use xlink:href="#minusButton" id="delayMinusButton" x="208" y="232" />
+
+      <!-- <use xlink:href="#updateButton" id="theUpdateButton" x="118" y="209" /> -->
+      <!-- <use xlink:href="#plusButton" id="delayPlusButton" x="198" y="217" /> -->
+      <!-- <use xlink:href="#minusButton" id="delayMinusButton" x="198" y="232" /> -->
+
+      <use xlink:href="#backButton" id="historyBackButton" x="40" y="209" />
+      <!-- <use xlink:href="#forwardButton" id="historyForwardButton" x="220" y="209" /> -->
+      
+    </svg>
+
+    <script type="text/javascript" src="storage.js" defer></script>
+    <script type="text/javascript" src="calls.js" defer></script>
+    
+  </body>
+
+
+</html>
