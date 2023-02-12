@@ -1,0 +1,9 @@
+The only data stored by the app are the ones willingly provided by
+the user and necessary to the functioning of the app.
+Exhaustive list: the refresh delay in seconds, as set from the app's
+only screen, is stored when set by the user, then restored when the
+app is restarted.
+
+The app does not communicate outside of your device. The data
+necessary so that the app functions, as enumerated above, are not
+communicated outside of your device.
