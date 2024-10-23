@@ -26,6 +26,7 @@ cues = [
     'Illegal Procedure',
     '⭐⭐ Star Pass Violation',
     '⭐⭐ Pass Interference',
+    '⭐⭐ Illegal Exit',
     'Misconduct',
     '⭐⭐ Insubordination',
     
